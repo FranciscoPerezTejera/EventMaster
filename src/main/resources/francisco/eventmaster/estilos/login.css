@@ -1,0 +1,13 @@
+#boton {
+    -fx-background-color: #38B6FF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+}
+#label {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+}
+#textfield {
+    -fx-background-radius: 5px; 
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+
+}
