@@ -12,7 +12,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
-import javafx.scene.layout.Background;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
 
