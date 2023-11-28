@@ -30,7 +30,8 @@ public class PantallaInicioController implements Initializable {
     }    
 
     @FXML
-    private void onLoginAccion(ActionEvent event) {
+    private void onLoginAccion(ActionEvent event) throws IOException {
+        App.setRoot("PantallaAdministracion");
     }
 
     @FXML

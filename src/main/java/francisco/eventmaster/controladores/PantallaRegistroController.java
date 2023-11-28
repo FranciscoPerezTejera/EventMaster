@@ -70,8 +70,10 @@ public class PantallaRegistroController implements Initializable {
     
 
     @FXML
-    private void onRegisterButton(ActionEvent event) {
-        //TODO
+    private void onRegisterButton(ActionEvent event) throws IOException {
+        
+        App.setRoot("PantallaAdministracion");
+        
     }
     
 }

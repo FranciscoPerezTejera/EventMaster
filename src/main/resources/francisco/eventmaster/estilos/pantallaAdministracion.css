@@ -1,0 +1,21 @@
+#menuBar {
+	
+	-fx-background-color: #907F63;
+	
+}
+
+#menuBar .label {
+	
+	-fx-text-fill: #38B6FF;
+	-fx-font-weight: bold;
+    -fx-font-size: 13px;
+	-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.4), 10, 0, 1, 2);
+	
+}
+
+#menuBar .label:hover {
+	
+    -fx-text-fill: #004AAD;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.4), 10, 0, 0, 0);
+	
+}
