@@ -5,10 +5,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Menu;
 
 public class PantallaAdministracionController implements Initializable {
+
+    @FXML
+    private Menu closeSession;
 
 
     @Override
@@ -36,8 +41,13 @@ public class PantallaAdministracionController implements Initializable {
     private void onConfirmationScreen(ActionEvent event) {
     }
 
-    @FXML
     private void onLogOut(ActionEvent event) throws IOException {
+        
+    }
+
+    @FXML
+    private void onLogOut(Event event) throws IOException {
+       
         App.setRoot("PantallaInicio");
     }
     
