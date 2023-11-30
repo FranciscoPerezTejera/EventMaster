@@ -30,7 +30,7 @@ public class PantallaRegistroController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
          bornDate.setConverter(new StringConverter<LocalDate>(){
-             DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+             DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
              @Override
              public String toString(LocalDate date) {
                  if (date != null) {

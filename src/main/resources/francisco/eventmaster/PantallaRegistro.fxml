@@ -29,7 +29,7 @@
     <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="54.0" valignment="BOTTOM" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <ImageView fitHeight="116.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="115.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagenes/logo_DAD_Definitivo.png" />
          </image>

@@ -22,7 +22,8 @@ public class PantallaAdministracionController implements Initializable {
     }    
 
     @FXML
-    private void onEventCreate(ActionEvent event) {
+    private void onEventCreate(ActionEvent event) throws IOException {
+        App.setRoot("PantallaCrearEvento");
     }
 
     @FXML
@@ -46,9 +47,13 @@ public class PantallaAdministracionController implements Initializable {
     }
 
     @FXML
-    private void onLogOut(Event event) throws IOException {
+    private void onLogOut(Event event) {
        
-        App.setRoot("PantallaInicio");
+        try {
+            App.setRoot("PantallaInicio");
+        } catch (IOException ex) {
+            System.out.println("Sesion cerrada. Nos vemos pronto.");
+        }
     }
     
 }

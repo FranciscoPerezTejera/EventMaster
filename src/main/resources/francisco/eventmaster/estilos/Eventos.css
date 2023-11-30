@@ -1,0 +1,55 @@
+#boton {
+    -fx-background-color: #38B6FF;
+    fx-text-fill: #004AAD;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+}
+#label {
+    -fx-text-fill: #38B6FF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+}
+#textfield {
+    
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color:  #d7d7d7;
+    -fx-text-fill:  #004AAD;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+
+}
+#datePicker {
+
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+    -fx-control-inner-background:  #D7D7D7;
+
+}
+#datePicker .text-field {
+    -fx-font-family: Arial;
+    -fx-font-weight: Bold;
+    -fx-text-fill: #004AAD;
+}
+#comboBox { 
+    -fx-background-color:  #d7d7d7;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+}
+#comboBox .arrow {
+    -fx-background-color: #004AAD;
+}
+#comboBox .list-cell {
+    -fx-text-fill: #004AAD;
+    -fx-background-color:  #d7d7d7;
+    -fx-font-family: Arial;
+    -fx-font-weight: Bold;
+}
+
+#comboBox .list-cell:hover {
+    -fx-background-color: #38B6FF;
+    -fx-text-fill: #004AAD;
+}
+
+#spinner {
+    -fx-background-color:  #d7d7d7;
+    -fx-text-fill: #004AAD;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 2, 5);
+}
