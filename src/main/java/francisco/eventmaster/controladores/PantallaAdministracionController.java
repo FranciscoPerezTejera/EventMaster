@@ -42,18 +42,11 @@ public class PantallaAdministracionController implements Initializable {
     private void onConfirmationScreen(ActionEvent event) {
     }
 
-    private void onLogOut(ActionEvent event) throws IOException {
-        
-    }
-
     @FXML
-    private void onLogOut(Event event) {
-       
-        try {
-            App.setRoot("PantallaInicio");
-        } catch (IOException ex) {
-            System.out.println("Sesion cerrada. Nos vemos pronto.");
-        }
+    private void onLogOut(ActionEvent event) throws IOException {
+     
+        App.setRoot("PantallaInicio");
+        
     }
     
 }

@@ -14,6 +14,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
 
@@ -64,6 +65,9 @@ public class PantallaCrearEventoController implements Initializable {
                 };
             }
         });
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, Integer.MAX_VALUE, 1);
+        guestCountSpinner.setValueFactory(valueFactory);
+        guestCountSpinner.getEditor().setStyle("-fx-text-fill: #004AAD; -fx-font-weight: bold; -fx-font-family: 'Arial';");
     }
 
     @FXML

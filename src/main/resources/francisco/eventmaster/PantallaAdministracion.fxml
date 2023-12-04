@@ -24,9 +24,9 @@
                   <MenuItem mnemonicParsing="false" onAction="#onEventToList" style="-fx-text-fill: #004AAD;" />
                </items></Menu>
             <Menu mnemonicParsing="false" onAction="#onConfirmationScreen" text="CONFIRMACIONES" />
-            <Menu fx:id="closeSession" mnemonicParsing="false" onMenuValidation="#onLogOut" text="CERRAR SESIÓN">
+            <Menu fx:id="closeSession" mnemonicParsing="false" onAction="#onLogOut" text="SALIR">
                <items>
-                  <MenuItem mnemonicParsing="false" style="-fx-text-fill: #004AAD;" text="salir" />
+                  <MenuItem mnemonicParsing="false" style="-fx-text-fill: #004AAD;" text="Cerrar Sesión" />
                </items></Menu>
          </menus>
       </MenuBar>
