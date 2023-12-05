@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../francisco/eventmaster/estilos/Eventos.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../francisco/eventmaster/estilos/Eventos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
       <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
@@ -57,7 +57,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField HBox.hgrow="ALWAYS">
+                  <TextField id="textfield">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
@@ -72,12 +72,69 @@
                   <Insets left="70.0" right="70.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+            <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Nombre del evento:" />
-                  <TextField />
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label id="label" text="Nombre del evento:" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField id="textfield">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label id="label" text="Nombre del evento:" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField id="textfield">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label id="label" text="Nombre del evento:" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField id="textfield">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label id="label" text="Nombre del evento:" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField id="textfield">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </VBox>
          </children>
       </VBox>
    </children>
