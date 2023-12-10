@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" stylesheets="@estilos/Eventos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="francisco.eventmaster.controladores.PantallaEditarEventoController">
+  <columnConstraints>
+      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="101.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="249.0" minHeight="10.0" prefHeight="235.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fitHeight="115.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/logo_DAD_Definitivo.png" />
+         </image>
+      </ImageView>
+      <Label id="label" text="EDITOR DE EVENTOS" GridPane.columnIndex="1">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button id="boton" mnemonicParsing="false" onAction="#onGoBack" prefHeight="0.0" prefWidth="62.0" text="SALIR" textFill="#004aad" GridPane.columnIndex="2">
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+         <children>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label id="label" text="Número de referencia:" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="textfield">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button id="boton" mnemonicParsing="false" onAction="#onSearchEventREF" text="BUSCAR" textFill="#004aad" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox fx:id="eventEditVBox" disable="true" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label id="label" text="Nombre del evento:" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="textfield" fx:id="nameEvent" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial Bold" size="12.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="70.0" right="70.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label id="label" text="Tipo del evento:" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox id="comboBox" fx:id="eventList" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label id="label" text="Número de invitados:" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="textfield" fx:id="inviteNumber" prefHeight="26.0" prefWidth="82.0">
+                                 <HBox.margin>
+                                    <Insets left="90.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial Bold" size="12.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label id="label" text="Lugar del evento:" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="textfield" fx:id="eventLocation">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial Bold" size="12.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label id="label" text="Fecha del evento:" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker id="datePicker" fx:id="datePicker" editable="false" promptText="CLICA AQUÍ --&gt;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Button id="boton" mnemonicParsing="false" onAction="#onEditEvent" text="EDITAR EVENTO" textFill="#004aad" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="10.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>

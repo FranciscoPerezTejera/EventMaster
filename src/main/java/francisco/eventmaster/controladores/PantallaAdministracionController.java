@@ -27,26 +27,27 @@ public class PantallaAdministracionController implements Initializable {
     }
 
     @FXML
-    private void onEventEdit(ActionEvent event) {
+    private void onEventEdit(ActionEvent event) throws IOException {
+        App.setRoot("PantallaEditarEvento");
     }
 
     @FXML
-    private void onEventToList(ActionEvent event) {
+    private void onEventToList(ActionEvent event) throws IOException {
+        App.setRoot("PantallaListarEvento");
     }
 
     @FXML
-    private void onMailService(ActionEvent event) {
+    private void onMailService(ActionEvent event) throws IOException {
+        App.setRoot("PantallaMensajeria");
     }
 
     @FXML
-    private void onConfirmationScreen(ActionEvent event) {
+    private void onConfirmationScreen(ActionEvent event) throws IOException {
+        App.setRoot("PantallaConfirmaciones");
     }
 
     @FXML
     private void onLogOut(ActionEvent event) throws IOException {
-     
         App.setRoot("PantallaInicio");
-        
-    }
-    
+    }  
 }

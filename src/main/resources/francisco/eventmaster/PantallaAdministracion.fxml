@@ -21,9 +21,12 @@
             </Menu>
             <Menu mnemonicParsing="false" onAction="#onMailService" text="MENSAJERIA">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#onEventToList" style="-fx-text-fill: #004AAD;" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMailService" style="-fx-text-fill: #004AAD;" text="Ver Mensajeria" />
                </items></Menu>
-            <Menu mnemonicParsing="false" onAction="#onConfirmationScreen" text="CONFIRMACIONES" />
+            <Menu mnemonicParsing="false" onAction="#onConfirmationScreen" text="CONFIRMACIONES">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onConfirmationScreen" style="-fx-text-fill: #004AAD;" text="Ver confirmaciones" />
+               </items></Menu>
             <Menu fx:id="closeSession" mnemonicParsing="false" onAction="#onLogOut" text="SALIR">
                <items>
                   <MenuItem mnemonicParsing="false" style="-fx-text-fill: #004AAD;" text="Cerrar Sesión" />

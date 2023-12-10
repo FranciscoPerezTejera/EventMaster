@@ -12,26 +12,33 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
 
-public class PantallaCrearEventoController implements Initializable {
+public class PantallaEditarEventoController implements Initializable {
 
     @FXML
-    private ComboBox<String> eventTypeComboBox;
+    private VBox eventEditVBox;
     @FXML
-    private Spinner<Integer> guestCountSpinner;
+    private TextField nameEvent;
     @FXML
-    private DatePicker eventDateDatePicker;
+    private ComboBox<String> eventList;
+    @FXML
+    private TextField inviteNumber;
+    @FXML
+    private TextField eventLocation;
+    @FXML
+    private DatePicker datePicker;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        eventTypeComboBox.getItems().addAll("Boda", "Bautizo", "Comunión", "Cumpleaños", "Concierto");
-        eventTypeComboBox.getSelectionModel().selectFirst();
-        eventDateDatePicker.setConverter(new StringConverter<LocalDate>() {
+        eventList.getItems().addAll("Boda", "Bautizo", "Comunión", "Cumpleaños", "Concierto");
+        eventList.getSelectionModel().selectFirst();
+        datePicker.setConverter(new StringConverter<LocalDate>() {
             DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
             @Override
@@ -50,7 +57,7 @@ public class PantallaCrearEventoController implements Initializable {
                 return null;
             }
         });
-        eventDateDatePicker.setDayCellFactory(new Callback<DatePicker, DateCell>() {
+        datePicker.setDayCellFactory(new Callback<DatePicker, DateCell>() {
             @Override
             public DateCell call(DatePicker param) {
                 return new DateCell() {
@@ -64,19 +71,23 @@ public class PantallaCrearEventoController implements Initializable {
                 };
             }
         });
-        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, Integer.MAX_VALUE, 1);
-        guestCountSpinner.setValueFactory(valueFactory);
-        guestCountSpinner.getEditor().setStyle("-fx-text-fill: #004AAD; -fx-font-weight: bold; -fx-font-family: 'Arial';");
     }
 
     @FXML
     private void onGoBack(ActionEvent event) throws IOException {
+
+        App.setRoot("PantallaAdministracion");
+
+    }
+
+    @FXML
+    private void onEditEvent(ActionEvent event) throws IOException {
         App.setRoot("PantallaAdministracion");
     }
 
     @FXML
-    private void onEventCreate(ActionEvent event) throws IOException {
-        App.setRoot("PantallaAdministracion");
+    private void onSearchEventREF(ActionEvent event) {
+        eventEditVBox.setDisable(false);
     }
 
 }
